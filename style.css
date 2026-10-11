@@ -1,0 +1,327 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --cor1: #D6008F;
+    --cor2: #B807D6;
+    --cor3: #D6000E;
+}
+
+header {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--cor2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 10px 10px 1px 1px black;
+    z-index: 2;
+}
+
+header h1 {
+    font-family: "Bungee", sans-serif;
+    color: red;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.308);
+}
+
+header #carrinho {
+    position: relative;
+}
+
+header #carrinho #numPedido {
+    position: absolute;
+    bottom: -5px;
+    right: 10px;
+    background-color: #D6000E;
+    padding: 3px;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #D6000E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    line-height: 1;
+    color: white;
+    box-shadow: 1px 5px 10px #ffffff6c;
+    transition: transform 0.5s, background-color 0.5s, border 0.5s;
+}
+
+header #carrinho #numPedido span {
+    transform: translateX(0.7px);
+}
+
+header a {
+    align-self: flex-end;
+    color: #D6000E;
+    margin-right: 10px;
+}
+
+header .fa-cart-shopping {
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.397));
+    font-size: 1.5em;
+    border-bottom: 2px solid var(--cor3);
+    padding: 5px;
+    transition: transform 0.5s, color 0.5s, border 0.5s;
+}
+
+header #carrinho:hover .fa-cart-shopping {
+    transform: scale(1.1);
+    color: var(--cor2);
+    border-bottom: 2px solid var(--cor2);
+}
+
+header #carrinho:hover #numPedido {
+    transform: scale(1.1);
+    background-color: var(--cor2);
+    border: 2px solid var(--cor2);
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+main #banner {
+    width: 100%;
+    height: 200px;
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+}
+
+main #banner #filtro {
+    background-color: rgba(0, 0, 0, 0.521);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+main #banner img {
+    object-fit:fill;
+}
+
+main h2 {
+    font-family: "Archivo Black", 'Times New Roman', Times, serif;
+    color: #B807D6;
+    font-size: 1.3em;
+}
+
+main #explorar {
+    padding: 10px;
+    background-color: #b707d66b;
+    margin: center;
+    margin-top: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+main .venda {
+    max-width: 95%;
+    min-width: 95%;
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+main .venda .mover {
+    padding: 15px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: none;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    color: gray;
+    background-color: white;
+    z-index: 5;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.26);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+main .venda .mover:hover {
+    transform: scale(1.03);
+}
+
+main .venda .esquerda {
+    left: 1px;
+    bottom: 30%
+}
+
+main .venda .direita {
+    right: 1px;
+    bottom: 30%
+}
+
+main #explorar #categorias {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 5px;
+    gap: 5px;
+}
+
+#categorias .btnExplorar {
+    padding: 5px;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+#categorias .btnExplorar:hover {
+    transform: scale(1.05);
+}
+
+#btnPop, #btnMol {
+    background-color: #d6000e46;
+}
+
+#btnTemp, #btnPim {
+    background-color: #d6008f42;
+}
+
+/* ------------------POPULARES */
+
+main #populares {
+    background-color: #d6008f6b;
+    text-align: left;
+    outline: 2px solid #d6008f6b;
+}
+
+main .listagem {
+    display: flex;
+    justify-content: flex-start;
+    transition: transform 0.3s;
+}
+
+main .produto {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.425);
+    position: relative;
+    max-height: 365px;
+    transition: transform 0.3s;
+    min-width: 257px;
+    flex: 0 0 239px;
+    margin: 5px;
+}
+
+main .produto:hover {
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.712);
+}
+
+main .produto #container {
+    display: flex;  
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+main .produto #container h3 {
+    text-align: center;
+    font-size: clamp(1em, 1.2em, 2em);
+    max-height: 1.2em;
+}
+
+main .produto #container img {
+    width: 80%;
+    max-width: 206px;
+    filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 0.425));
+    margin-top: 10px;
+}
+
+main .produto #container .preco {
+    font-size: clamp(1em, 2.2em, 3em);
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: var(--cor3);
+}
+
+main .produto #container .addCarrinho {
+    padding: 10px;
+    width: 70%;
+    font-size: 1.4em;
+    border-radius: 15px;
+    background-color: transparent;
+    border: 2px solid var(--cor3);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+main .produto #container .addCarrinho:hover {
+    background-color: #d6000e48;
+    color: #D6000E;
+}
+
+/* --------------- */
+
+/* --------------------MOLHOS */
+
+main #molhos {
+    background-color: #d6000e62;
+    outline: 2px solid #d6000e62;
+}
+
+/* -------------------- */
+
+/* ------------------TEMPEROS */
+main #temperos {
+    background-color: #b707d665;
+    outline: 2px solid #b707d665;
+}
+/* -------------------- */
+
+/* ---------------PIEMENTAS */
+main #pimentas {
+    background-color: #d6008f6b;
+    outline: 2px solid #d6008f6b;
+}
+
+/* ---------------- */
+
+footer {
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+footer #infos {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer nav {
+    margin-top: 10px;
+}
+
+footer a {
+    color: white;
+    font-size: 1.3em;
+    margin: 5px;
+}
