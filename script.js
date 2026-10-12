@@ -39,6 +39,15 @@ btnPim.addEventListener('click', () => {
     })
 })
 
+window.addEventListener('scroll', () => {
+    if (window.scrollY >= 260) {
+        document.querySelector('header').style.position = 'fixed'
+        document.querySelector('header').style.transform = 'translateY(-20px)'
+    } else {
+        document.querySelector('header').style.position = 'static'
+    }
+})
+
 let vendaVeZ = 0 // O IF É PRA IGNORAR O PRIMEIRO .venda QUE EU TIVE PREGUIÇA DE ARRUMAR A CLASS
 for (venda of divsVenda) {
     if (vendaVeZ != 0) {
@@ -54,23 +63,54 @@ function mover(varQtdProd, target, dir=-1) { //OLHA NUNCA ENCOSTE NISSO PQ PRA E
     let itemList = [...divAtual.children]
     let xAtual = Number(divAtual.style.transform.slice(divAtual.style.transform.lastIndexOf('(')+1, divAtual.style.transform.search('px')))
 
+
+
+    let direction = null;
+
+    for (classe of [...target.classList]) {
+        if (classe == 'direita') {
+            direction = 'direita'
+            break
+        } else {
+            direction = 'esquerda'
+        }
+    }
+
+    let areaVisivel = divAtual.parentElement;
+
+    let maxDir = Math.min(
+        0,
+        areaVisivel.clientWidth - divAtual.scrollWidth
+    );
+
+    let maxEsq = 0
+
     if (varQtdProd == 0) {
         movX = 267
     }
 
+    if (movX > (xAtual) - (maxDir) && direction == 'direita') {
+        movX = (xAtual) - (maxDir) +16.5
+    } // -534 -801
+
+    if ((movX) + (xAtual) > maxEsq && direction == 'esquerda') {
+        movX -= (movX) + (xAtual) 
+    }
+
     movX *= (dir)
-    
+
     divAtual.style = `transform: translateX(${(xAtual)+(movX)}px);`
     xAtual = Number(divAtual.style.transform.slice(divAtual.style.transform.lastIndexOf('(')+1, divAtual.style.transform.search('px')))
 
-    if (xAtual == (itemList.length-1) * (-267)) {
+    if (xAtual == maxDir - 16.5) {
         target.parentElement.querySelector('.direita').style = 'visibility: hidden'
-    } else if (xAtual == 0) {
+    } else if (xAtual == maxEsq) {
         target.parentElement.querySelector('.esquerda').style = 'visibility: hidden'
     } else {
         target.parentElement.querySelector('.esquerda').style = 'visibility: visible'
         target.parentElement.querySelector('.direita').style = 'visibility: visible'
     }
+    console.log(xAtual)
 }
 
 for (button of moverEsquerda) {
@@ -87,6 +127,7 @@ for (button of moverDireita) {
 
 for (button of addCarrinho) {
     button.addEventListener('click', () => {
-        
+        carrinhoCont++
+        document.querySelector('.num').innerHTML = carrinhoCont
     })
 }

@@ -23,8 +23,10 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 10px 10px 1px 1px black;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.452);
     z-index: 2;
+    width: 100%;
+    position: static;
 }
 
 header h1 {
@@ -131,7 +133,6 @@ main #explorar {
 
 main .venda {
     max-width: 95%;
-    min-width: 95%;
     width: 100%;
     margin-top: 15px;
     padding: 10px;
@@ -227,7 +228,6 @@ main .produto {
     max-height: 365px;
     transition: transform 0.3s;
     min-width: 257px;
-    flex: 0 0 239px;
     margin: 5px;
 }
 
