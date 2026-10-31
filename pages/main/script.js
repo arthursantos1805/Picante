@@ -17,7 +17,12 @@ const divPimentas = document.getElementById('pimentas')
 const numPedido = document.getElementById('numPedido')
 
 let divAtual = null
-let carrinhoCont = JSON.parse(localStorage.getItem('carrinhoItens')).length
+try {
+    let carrinhoCont = JSON.parse(localStorage.getItem('carrinhoItens')).length
+} catch {
+    let carrinhoCont = 0
+}
+
 numPedido.innerHTML = carrinhoCont
 let carrinhoArray = new Array()
 
