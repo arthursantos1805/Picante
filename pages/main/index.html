@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picantê</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-query.css">
+    <script src="https://kit.fontawesome.com/ff09a9fe3c.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>PICANTÊ</h1>
+        <div id="carrinho">
+            <a href="../carrinho/index.html" target="_self"><i class="fa-solid fa-cart-shopping"></i></a>
+            <div id="numPedido"><span class="num">0</span></div>
+        </div>
+        <button id="btnModo" class="btnModoClaro"><i class="fa-solid fa-sun"></i></button>
+    </header>
+
+    <main>
+        <div id="banner">
+            <div id="filtro"> </div>
+            <img src="../../images/banner.jpg" alt="Banner Pimenta">
+        </div>
+        <div id="explorar" class="venda">
+            <p>Explore por categorias</p>
+            <div id="categorias">
+                <button class="btnExplorar" id="btnPop"><i class="fa-solid fa-thumbs-up"></i>Populares</button>
+                <button class="btnExplorar" id="btnMol"><i class="fa-solid fa-glass-water"></i>Molhos</button>
+                <button class="btnExplorar" id="btnTemp"><i class="fa-solid fa-plant-wilt"></i>Temperos</button>
+                <button class="btnExplorar" id="btnPim"><i class="fa-solid fa-fire-flame-curved"></i>Pimentas</button>
+            </div>
+        </div>
+
+        <h1 id="tituloMedia"></h1>
+
+        <div id="divVendas">
+            <div id="populares" class="venda">
+                <button class="mover esquerda">&lt;</button>
+                <button class="mover direita">&gt;</button>
+                <h2>Os produtos favoritos</h2>
+                <div class="listagem">
+                    <div class="produto propopular">
+                        <div id="container" class="container">
+                            <h3>Carolina Reaper 200g</h3>
+                            <img src="../../images/carolina-reaper.png" alt="Carolina Reaper">
+                            <p class="preco">R$45.99</p>
+                            <button class="addCarrinho">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                    <div class="produto propopular">
+                        <div id="container" class="container">
+                            <h3>Carolina Reaper 200g</h3>
+                            <img class="imgProduto" src="../../images/carolina-reaper.png" alt="Carolina Reaper">
+                            <p class="preco">R$45.99</p>
+                            <button class="addCarrinho ">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                    <div class="produto propopular">
+                        <div id="container" class="container">
+                            <h3>Carolina Reaper 200g</h3>
+                            <img class="imgProduto" src="../../images/carolina-reaper.png" alt="Carolina Reaper">
+                            <p class="preco">R$45.99</p>
+                            <button class="addCarrinho">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                    <div class="produto propopular">
+                        <div id="container" class="container">
+                            <h3>Carolina Reaper 200g</h3>
+                            <img class="imgProduto" src="../../images/carolina-reaper.png" alt="Carolina Reaper">
+                            <p class="preco">R$45.99</p>
+                            <button class="addCarrinho">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="molhos" class="venda">
+                <h2>Molhos especiais</h2>
+                <button class="mover esquerda">&lt;</button>
+                <button class="mover direita">&gt;</button>
+                <div class="listagem">
+                    <div class="produto promolho">
+                        <div id="container" class="container">
+                            <h3>Molho de Pimenta Malagueta 200ml</h3>
+                            <img class="imgProduto" src="../../images/molhopimentamalagueta.png" alt="Carolina Reaper">
+                            <p class="preco">R$24.50</p>
+                            <button class="addCarrinho">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                    <div class="produto promolho">
+                        <div id="container" class="container">
+                            <h3>Molho de Pimenta Malagueta 200ml</h3>
+                            <img class="imgProduto" src="../../images/molhopimentamalagueta.png" alt="Carolina Reaper">
+                            <p class="preco">R$24.50</p>
+                            <button class="addCarrinho">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                    <div class="produto promolho">
+                        <div id="container" class="container">
+                            <h3>Molho de Pimenta Malagueta 200ml</h3>
+                            <img class="imgProduto" src="../../images/molhopimentamalagueta.png" alt="Carolina Reaper">
+                            <p class="preco">R$24.50</p>
+                            <button class="addCarrinho">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                    <div class="produto promolho">
+                        <div id="container" class="container">
+                            <h3>Molho de Pimenta Malagueta 200ml</h3>
+                            <img class="imgProduto" src="../../images/molhopimentamalagueta.png" alt="Carolina Reaper">
+                            <p class="preco">R$24.50</p>
+                            <button class="addCarrinho">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                    <div class="produto promolho">
+                        <div id="container" class="container">
+                            <h3>Molho de Pimenta Malagueta 200ml</h3>
+                            <img class="imgProduto" src="../../images/molhopimentamalagueta.png" alt="Carolina Reaper">
+                            <p class="preco">R$24.50</p>
+                            <button class="addCarrinho">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                    <div class="produto promolho">
+                        <div id="container" class="container">
+                            <h3>Molho de Pimenta Malagueta 200ml</h3>
+                            <img class="imgProduto" src="../../images/molhopimentamalagueta.png" alt="Carolina Reaper">
+                            <p class="preco">R$24.50</p>
+                            <button class="addCarrinho">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="temperos" class="venda">
+                <h2>Temperos apimentados</h2>
+                <button class="mover esquerda">&lt;</button>
+                <button class="mover direita">&gt;</button>
+                <div class="listagem">
+                    <div class="produto protempero">
+                        <div id="container" class="container">
+                            <h3>Floco de pimenta malagueta 50g</h3>
+                            <img class="imgProduto" src="../../images/flocopimenta.png" alt="Carolina Reaper">
+                            <p class="preco">R$12.15</p>
+                            <button class="addCarrinho">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                    <div class="produto protempero">
+                        <div id="container" class="container">
+                            <h3>Floco de pimenta malagueta 50g</h3>
+                            <img class="imgProduto" src="../../images/flocopimenta.png" alt="Carolina Reaper">
+                            <p class="preco">R$12.15</p>
+                            <button class="addCarrinho">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                    <div class="produto protempero">
+                        <div id="container" class="container">
+                            <h3>Floco de pimenta malagueta 50g</h3>
+                            <img class="imgProduto" src="../../images/flocopimenta.png" alt="Carolina Reaper">
+                            <p class="preco">R$12.15</p>
+                            <button class="addCarrinho">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                    <div class="produto protempero">
+                        <div id="container" class="container">
+                            <h3>Floco de pimenta malagueta 50g</h3>
+                            <img class="imgProduto" src="../../images/flocopimenta.png" alt="Carolina Reaper">
+                            <p class="preco">R$12.15</p>
+                            <button class="addCarrinho">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="pimentas" class="venda">
+                <h2>Pimentas inteiras</h2>
+                <button class="mover esquerda">&lt;</button>
+                <button class="mover direita">&gt;</button>
+                <div class="listagem">
+                    <div class="produto propimenta">
+                        <div id="container" class="container">
+                            <h3>Jalapeño 500g</h3>
+                            <img class="imgProduto" src="../../images/jalapeno.png" alt="Carolina Reaper">
+                            <p class="preco">R$34.99</p>
+                            <button class="addCarrinho">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                    <div class="produto propimenta">
+                        <div id="container" class="container">
+                            <h3>Jalapeño 500g</h3>
+                            <img class="imgProduto" src="../../images/jalapeno.png" alt="Carolina Reaper">
+                            <p class="preco">R$34.99</p>
+                            <button class="addCarrinho">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                    <div class="produto propimenta">
+                        <div id="container" class="container">
+                            <h3>Jalapeño 500g</h3>
+                            <img class="imgProduto" src="../../images/jalapeno.png" alt="Carolina Reaper">
+                            <p class="preco">R$34.99</p>
+                            <button class="addCarrinho">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                    <div class="produto propimenta">
+                        <div id="container" class="container">
+                            <h3>Jalapeño 500g</h3>
+                            <img class="imgProduto" src="../../images/jalapeno.png" alt="Carolina Reaper">
+                            <p class="preco">R$34.99</p>
+                            <button class="addCarrinho">Adicionar <i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="infos">
+            <h4>©PicantêEmpress</h4>
+            <p id="numero"><i class="fa-solid fa-phone"></i> 89 945871232</p>
+        </div>
+        <nav id="redes">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-solid fa-paper-plane"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </nav>
+    </footer>
+</body>
+</html>
